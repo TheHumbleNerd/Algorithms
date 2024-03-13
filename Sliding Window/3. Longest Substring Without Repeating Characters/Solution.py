@@ -6,7 +6,7 @@ class Solution:
         while r < len(s):
             if s[r] in subStrSet:
                 maxLength = max(maxLength, len(subStrSet))
-                while l < r and s[r] in subStrSet:
+                while s[r] in subStrSet:
                     subStrSet.remove(s[l])
                     l += 1
             subStrSet.add(s[r])
