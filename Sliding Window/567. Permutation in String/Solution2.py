@@ -21,8 +21,6 @@ class Solution:
             if map2[s2[l]] == map1.get(s2[l], 0):
                 matchingKeys -= 1
             map2[s2[l]] -= 1
-            if map2[s2[l]] == 0:
-                map2.pop(s2[l])
             map2[s2[r]] = map2.get(s2[r], 0) + 1
             if map2[s2[r]] == map1.get(s2[r], 0):
                 matchingKeys += 1
