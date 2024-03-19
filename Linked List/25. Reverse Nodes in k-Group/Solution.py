@@ -24,13 +24,12 @@ class Solution:
             groupNext = groupLast.next
 
             current = groupStart
-            prev = groupLast
+            prev = groupNext
             while current != groupNext:
                 next = current.next
                 current.next = prev
                 prev = current
                 current = next
-            groupStart.next = current
             
             if not groupPrev:
                 newHead = prev
