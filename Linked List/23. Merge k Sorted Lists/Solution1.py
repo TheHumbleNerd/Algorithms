@@ -30,8 +30,8 @@ class Solution:
             return None
         elif l == 1:
             return lists[0]
-        else:
-            half = l//2
-            res1 = self.mergeKLists(lists[0:half])
-            res2 = self.mergeKLists(lists[half:l])
-            return self.mergeTwoLists(res1, res2)
+
+        half = l//2
+        res1 = self.mergeKLists(lists[0:half])
+        res2 = self.mergeKLists(lists[half:l])
+        return self.mergeTwoLists(res1, res2)
