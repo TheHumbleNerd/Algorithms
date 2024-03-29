@@ -32,11 +32,11 @@ class Solution:
                 current = next
             
             if not groupPrev:
-                newHead = prev
+                newHead = groupLast
             else:
                 groupPrev.next = groupLast
 
             groupPrev = groupStart
-            groupStart = current
+            groupStart = groupNext
 
         return newHead
